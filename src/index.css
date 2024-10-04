@@ -1,0 +1,221 @@
+:root {
+   --main-color-dark-blue: #0b0d17;
+  --main-color-white: #ffffff;
+  --main-color-light-blue: #d0d6f9;
+  --font-family-h5-subh2-nav-des: "Barlow Condensed", sans-serif;
+  --font-family-h1-4-sub1: "Bellefair", serif;
+  --background-image: url('./assets/home/background-home-desktop.jpg');
+
+}
+html {
+  overflow: hidden; /* fix boucing on the bottom */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+  color: white;
+}
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+
+  /* width: auto; */
+  /* overflow-y: scroll; */
+}
+.app{
+  width: 80%;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  height: 95%;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+.logo{
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.hrLine{
+  border-bottom: 2px solid white;
+  height: 5px;
+  margin-right: 10px;
+  width: 30%;
+  margin-bottom: 10px;
+}
+nav{
+width: 50%;
+height: 100%;
+display: flex;
+/* justify-content: center; */
+align-items: center;
+background-color: rgba(255, 255, 255, 0);
+backdrop-filter: blur(80px);
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.068);
+}
+ul{
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+li{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.yo{
+  width: 10%;
+}
+.link{
+  color: black;
+}
+.homeCon{
+  display: flex;
+  height: 750px;
+  align-items: center;
+}
+.firstCon{
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.secondCon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+.content{
+  position: absolute;
+  bottom: 110px;
+  left: 0;
+  margin: 10px;
+}
+span{
+  font-size: 120px; /* Increase font size to 48px */
+  line-height: 1.2; /* Adjust line height for better spacing */
+  letter-spacing: 2px; /* Add letter spacing for readability */
+  width: 400px; /* Adjust width as needed */
+  white-space: nowrap;
+  height: 200px;
+  letter-spacing: 3px;
+}
+.p{
+  font-size: 20px; /* Increase font size to 48px */
+  letter-spacing: 3px;
+}
+.sp{
+  letter-spacing: 3px;
+}
+.content2{
+  width: 260px;
+  height: 260px;
+  border-radius:60% ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 190px;
+  margin-right: 150px;
+  background-color: whitesmoke;
+  color: black;
+  font-size: 2rem;
+  line-height: 3.1;
+  letter-spacing: 3px;
+  font-family: 'Times New Roman', Times, serif;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.content2:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 5px rgba(255, 255, 255, 0.2);
+  outline: 1px solid rgba(124, 118, 118, 0.192);
+}
+.destinationBox{
+  margin-top: 30px;
+  height: 700px;
+  display: flex;
+}
+.desOne{
+  width: 50%;
+  height: 100%;
+}
+.desTwo{
+  width: 50%; /* Adjust the width slightly to account for the borders */
+  height: 100%;
+  padding-left: 30px;
+}
+.pickText{
+  font-size: 2rem;
+  letter-spacing:3px ;
+  margin-left: 10px;
+}
+small{
+  margin-right: 20px;
+  color: gray;
+}
+.planetImg{
+  width: 400px;
+  height: 400px;
+  position: relative;
+  top: 90px;
+  left: 210px;
+  border-radius: 50%;
+}
+.buttonDiv{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top:190px;
+  width: 400px;
+  height: 30px;
+}
+button{
+  height: 100%;
+  border: none;
+  font-size: 1.4rem;
+  color: white;}
+.Moon{
+  font-size: 8rem;
+  font-weight: 2rem;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-style: var(--font-family-h5-subh2-nav-des);
+}
+.planetDetails{
+  margin-left: 30px;
+  letter-spacing: 1.7px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.planetHrLine{
+  width: 500px;
+  margin-left: 30px;
+}
+.avg{
+  display: flex;
+  padding-left: 30px;
+}
+.avgText{
+  margin-right: 50px;
+}
+.cal{
+  display: flex;
+  padding-left: 30px;
+
+}
+.calText{
+  margin-right: 50px;
+}
+.the{
+  margin-left: 30px;
+}
