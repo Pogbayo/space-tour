@@ -65,6 +65,8 @@ background-color: rgba(255, 255, 255, 0);
 backdrop-filter: blur(80px);
 border-radius: 10px;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.068);
+font-family: "Barlow Condensed", sans-serif;
+
 }
 ul{
   display: flex;
@@ -80,6 +82,14 @@ li{
 }
 .link{
   color: white;
+  text-decoration: none;
+}
+.link:hover{
+  border-bottom: 2px solid white;
+
+}
+.link:active {
+  color: #ffffff;
 }
 .homeCon{
   display: flex;
@@ -103,6 +113,8 @@ li{
   bottom: 110px;
   left: 0;
   margin: 10px;
+  font-family: "Barlow Condensed", sans-serif;
+
 }
 span{
   font-size: 120px; /* Increase font size to 48px */
@@ -112,6 +124,7 @@ span{
   white-space: nowrap;
   height: 200px;
   letter-spacing: 3px;
+  font-family: var(--font-family-h1-4-sub1);
 }
 .p{
   font-size: 20px; /* Increase font size to 48px */
@@ -131,16 +144,96 @@ span{
   margin-right: 150px;
   background-color: whitesmoke;
   color: black;
-  font-size: 2rem;
-  line-height: 3.1;
+  font-size: 1.25rem;
   letter-spacing: 3px;
-  font-family: 'Times New Roman', Times, serif;
   transition: box-shadow 0.3s ease-in-out;
+  color: var(--main-color-dark-blue);
+  font-family: var(--font-family-h1-4-sub1);
+  font-weight: 400;
+
 }
 .content2:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 5px rgba(255, 255, 255, 0.2);
   outline: 1px solid rgba(124, 118, 118, 0.192);
 }
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar {
+    height: 100px;
+    padding: 0 20px;
+  }
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .hrLine {
+display: none;  }
+
+  nav {
+    width: 60%;
+    justify-content: space-around;
+  }
+
+  ul {
+    gap: 20px;
+  }
+
+  li {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  /* Home container adjustments */
+  .homeCon {
+    flex-direction: row;
+    height: 850px;
+  }
+
+  .firstCon {
+    width: 60%;
+  }
+
+  .secondCon {
+    width: 40%;
+  }
+
+  .content {
+    bottom: 150px;
+    left: 20px;
+  }
+
+  .p {
+    font-size: 24px;
+    letter-spacing: 4px;
+  }
+
+  span {
+    font-size: 160px;
+    width: 400px;
+  }
+
+  .sp {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  /* Adjusting the explore button size */
+  .content2 {
+    width: 300px;
+    height: 300px;
+    margin-right: 100px;
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+/**destination page**/
 .destinationBox{
   margin-top: 30px;
   height: 700px;
@@ -153,7 +246,9 @@ span{
 .desTwo{
   width: 50%; /* Adjust the width slightly to account for the borders */
   height: 100%;
-  padding-left: 30px;
+  padding-left: 10px;
+  position: relative;
+  right: 130px;
 }
 .pickText{
   font-size: 2rem;
@@ -165,11 +260,11 @@ small{
   color: gray;
 }
 .planetImg{
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 410px;
   position: relative;
   top: 90px;
-  left: 210px;
+  left: 100px;
   border-radius: 50%;
 }
 .buttonDiv{
@@ -182,24 +277,28 @@ small{
 button{
   height: 100%;
   border: none;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: white;}
 .Moon{
-  font-size: 8rem;
-  font-weight: 2rem;
+  font-size: 6rem;
+  font-weight: 1.6rem;
   margin-left: 20px;
   margin-top: 20px;
+  margin-bottom: 26px;
   font-style: var(--font-family-h5-subh2-nav-des);
 }
 .planetDetails{
   margin-left: 30px;
   letter-spacing: 1.7px;
   margin-top: 10px;
+  width: 380px;
   margin-bottom: 30px;
 }
 .planetHrLine{
-  width: 500px;
+  width: 400px;
   margin-left: 30px;
+  border-bottom: 2px solid white;
+  height: 1px;
 }
 .avg{
   display: flex;
@@ -237,29 +336,43 @@ button{
   width: 50%;
 }
 .crewDetails{
-  border: 2px solid salmon;margin-top: 250px;
+  margin-top: 250px;
+  position: relative;
+  bottom: 60px;
 }
 .crewRole{
   height: 40px;
+  font-size: 2.5rem;
 }
 .name{
   height: 50px;
+  font-size: 4rem;
+  margin-bottom: 40px;
+  position: relative;
+  bottom: 40px;
 }
 .bio{
   height: 120px;
+  width: 400px;
+  line-height: 2;
+  word-spacing: 4px;
+  position: relative;
+  bottom: 30px;
 }
 .dotButtons{
-  height: 50px;
+  height: 30px;
   display: flex;
-  width: 40%;
+  width: 15%;
   justify-content: space-between;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 8px;
   margin-top: 30px;
+  position: relative;
+  bottom: 40px;
 }
 .dot{
-  height: 25px;
-  width: 24px;
+  height: 14px;
+  width: 14px;
   border-radius: 50%;
   background-color: transparent;
   outline: 2px solid grey;
@@ -274,65 +387,72 @@ button{
   height: 688px;
 }
 .techBox{
-  border: 2px solid blue;
   height: 700px;
   width: 99%;
   display: flex;
 }
 .firstTechBox{
-  border: 2px solid white;
   width: 50%;
   margin-top: 30px;
   height: 80%;
 }
 .space{
-  border: 2px solid rgba(228, 6, 43, 0.952);
+  font-size: 2rem;
 }
 .divider{
-  border: 2px solid rgb(34, 178, 89);
   display: flex;
-  width: 680px;
+  width: 760px;
   margin-top: 29px;
   height: 60%;
 }
 .vertical{
-  border: 4px solid yellow ;
-  width: 80px;
-  height: 80%;
+  width: 200px;
+  height: 360px;
   margin-right: 20px;
   margin-top: 20px;
-  
+  display: grid;
+  flex-direction: column;
+}
+.ver2{
+  position: relative;
+  top: 10px;
+  left: -10px;
 }
 .rounded{
-  height:33.33333333333333% ;
+  height:90px ;
   text-align: center;
-  border: 2px solid black;
-  background-color: white;
+  background-color: transparent;
   color: black;
   display: flex; /* Necessary for using align-items */
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  width: 90px;
+  outline:2px solid white;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .techLargest{
-  border: 2px solid fuchsia;
   width: 400px;
   height: 80px;
+  font-size: 3.4rem;
 }
 .techDetails{
-  border: 2px solid white;
   height: 150px;
+  position: relative;
+  bottom: 27px;
+  line-height: 1.7;
+  word-spacing: 0.5rem;
+  width: 500px;
 }
 .techImg{
   width: 450px;
   height: 500px;
   position: relative;
-  top: 100px;
-  border: 2px solid yellow;
-  
+  top: 100px;  
 }
 .secondTechBox{
-  border: 2px solid orangered;
   display: flex;
   justify-content: flex-end;
   width: 50%;

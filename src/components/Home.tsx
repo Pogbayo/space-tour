@@ -9,7 +9,7 @@ const Home = () => {
             Let’s face it; if you want to go to space, you might <br />
             as well genuinely go to outer space and not hover <br />
             kind of on the edge of it. Well sit back, and relax <br />
-            because we’ll give you a truly out of this world experience!
+            because we’ll give you a truly out of this world <br /> experience!
           </p>
         </article>
       </section>

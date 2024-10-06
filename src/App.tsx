@@ -6,46 +6,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import axios, { AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
+import { DestinationData } from "./Types/DestinationData";
+import { CrewMember } from "./Types/CrewMember";
+import { TechnologyData } from "./Types/TechnologyData";
 function App() {
-  interface Destination {
-    name: string;
-    images: {
-      png: string;
-      webp: string;
-    };
-    description: string;
-    distance: string;
-    travel: string;
-  }
+  // interface RootObject {
+  //   destinations: DestinationData[];
+  //   crew: CrewMember[];
+  //   technology: TechnologyData[];
+  // }
 
-  interface CrewMember {
-    name: string;
-    images: {
-      png: string;
-      webp: string;
-    };
-    role: string;
-    bio: string;
-  }
-
-  interface Technology {
-    name: string;
-    images: {
-      portrait: string;
-      landscape: string;
-    };
-    description: string;
-  }
-
-  interface RootObject {
-    destinations: Destination[];
-    crew: CrewMember[];
-    technology: Technology[];
-  }
-
-  const [destination, setDestination] = useState<Destination[]>([]);
+  const [destination, setDestination] = useState<DestinationData[]>([]);
   const [crew, setCrew] = useState<CrewMember[]>([]);
-  const [technology, setTechnology] = useState<Technology[]>([]);
+  const [technology, setTechnology] = useState<TechnologyData[]>([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -55,19 +28,16 @@ function App() {
             axios.get("http://localhost:5000/crew"),
             axios.get("http://localhost:5000/technology"),
           ])) as [
-            AxiosResponse<Destination[]>,
+            AxiosResponse<DestinationData[]>,
             AxiosResponse<CrewMember[]>,
-            AxiosResponse<Technology[]>
+            AxiosResponse<TechnologyData[]>
           ];
 
         setDestination(destinationsResponse.data);
-        console.log(destinationsResponse.data);
 
         setCrew(crewResponse.data);
-        console.log(crewResponse.data);
 
         setTechnology(technologyResponse.data);
-        console.log(technologyResponse.data);
       } catch (error) {
         console.error(error);
       }
