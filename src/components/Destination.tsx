@@ -54,7 +54,7 @@ const Destination = ({ destinations }: Props) => {
         <article className="planetDetails">{chosenOne?.description}</article>
         <div className="planetHrLine"></div>
         <div className="avg">
-          <p className="avgText">AVG.DISTANCE</p>
+          <p className="avgText">AVG.DISTANCE ASD</p>
           <p>EST.TRAVEL TIME</p>
         </div>
         <section className="cal">

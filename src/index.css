@@ -4,7 +4,7 @@
   --main-color-light-blue: #d0d6f9;
   --font-family-h5-subh2-nav-des: "Barlow Condensed", sans-serif;
   --font-family-h1-4-sub1: "Bellefair", serif;
-  --background-image: url('./assets/home/background-home-desktop.jpg');
+  --background-image: url('/assets/home/background-home-desktop.jpg');
 
 }
 html {
