@@ -24,9 +24,9 @@ function App() {
       try {
         const [destinationsResponse, crewResponse, technologyResponse] =
           (await Promise.all([
-            axios.get("http://localhost:5000/destinations"),
-            axios.get("http://localhost:5000/crew"),
-            axios.get("http://localhost:5000/technology"),
+            axios.get("/data.json/destinations"),
+            axios.get("/data.json/crew"),
+            axios.get("/data.json"),
           ])) as [
             AxiosResponse<DestinationData[]>,
             AxiosResponse<CrewMember[]>,
@@ -34,7 +34,7 @@ function App() {
           ];
 
         setDestination(destinationsResponse.data);
-
+        console.log(destinationsResponse.data);
         setCrew(crewResponse.data);
 
         setTechnology(technologyResponse.data);
