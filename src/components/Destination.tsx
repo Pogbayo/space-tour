@@ -9,6 +9,7 @@ const Destination = ({ destinations }: Props) => {
   const itemName2 = destinations[1];
   const itemName3 = destinations[2];
   const itemName4 = destinations[3];
+
   const [chosenOne, setChosenOne] = useState<DestinationData | null>(
     destinations[0] || null
   );

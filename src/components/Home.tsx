@@ -4,7 +4,7 @@ const Home = () => {
       <section className="firstCon">
         <article className="content">
           <p className="p">So you want to travel to space</p>
-          <span>SPACE</span>
+          <span className="span">SPACE</span>
           <p className="sp">
             Let’s face it; if you want to go to space, you might <br />
             as well genuinely go to outer space and not hover <br />
