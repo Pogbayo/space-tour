@@ -5,11 +5,11 @@
   --font-family-h5-subh2-nav-des: "Barlow Condensed", sans-serif;
   --font-family-h1-4-sub1: "Bellefair", serif;
   --background-image: url('/assets/home/background-home-desktop.jpg');
-
+   --vh:1vh;
 }
 html {
-  overflow: hidden; /* fix boucing on the bottom */
-  height: 100%;
+  overflow: visible; /* fix boucing on the bottom */
+  height: calc(var(--vh, 1vh) * 100);
   margin: 0;
   padding: 0;
   overscroll-behavior: none;
@@ -19,22 +19,22 @@ body{
   margin: 0;
   padding: 0;
   /* height: 100%; */
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow-x: visible;
+  overflow-y: visible;
   background-image: var(--background-image);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
   position: relative;
 }
 .app{
-  width: 90%;
+  width: 100%;
   position: absolute;
   height: 95%;
   right: 0;
-  overflow: hidden;
+  overflow: visible;
   padding-top: 20px;
 }
 .navbar{
@@ -405,7 +405,7 @@ button:hover{
   body{
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: visible;
     /* background-image: url("/assets/home/background-home-mobile.jpg"); */
     background-size: cover;
     background-position: center;
@@ -416,12 +416,14 @@ button:hover{
   }
  
   .app{
-    width: 100%;
-    padding-top: 20px;
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: 10px;
     padding-left: 10px;
     border: none;
-    overflow: hidden;
-    
+    margin-top: 0;
+    /* box-sizing: border-box; */
+    /* overflow: scroll;     */
   }
   .navbar{
     display: flex;
@@ -475,12 +477,13 @@ nav{
   }
   .homeCon{
     display: flex;
-    height: 750px;
+    height: 650px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 100%;
+    width: 90%;
+    border: 2px solid red;
     margin: 0 auto;
   }
   .firstCon{
@@ -502,8 +505,8 @@ nav{
     left: 0;
     padding-top: 10px;
   }
-  span{
-    font-size: 50px; /* Increase font size to 48px */
+  .span{
+    font-size: 90px; /* Increase font size to 48px */
     line-height: 1; /* Adjust line height for better spacing */
     letter-spacing: 2px; /* Add letter spacing for readability */
     width: 300px; /* Adjust width as needed */
@@ -528,10 +531,12 @@ nav{
   }
   .sp{
     letter-spacing: 0;
-    font-size:16px ;
+    font-size:14px ;
     font-weight: 100;
-    width: auto;
+    width: 99%;
+    margin: 0 auto;
     padding: 10px;
+    border: 2px solid red;
     color: rgb(198, 179, 196);
 
   }
@@ -554,14 +559,15 @@ nav{
     font-weight: 400;
   }
   .destinationBox{
-    margin-top: 20px;
+    margin-top: 5px;
     height: auto;
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
-    gap: 20px;
+    gap: 0;
     justify-content: center;
     align-items: center;
+    border: 2px solid red;
     /* background-image: url("/creed/public/assets/crew/background-crew-mobile.jpg"); */
   }
   .desOne{
@@ -656,9 +662,9 @@ nav{
   .crewCon{
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 75vh;
     gap: 1px;
-    margin-top: 10px;
+    margin-top: 0;
     flex-direction: column-reverse;
   }
   .dev{
@@ -762,9 +768,9 @@ nav{
   .techBox{
     flex-direction: column-reverse;
     justify-content: center;
-    border: 2px solid red;
     align-items: center;
-    gap: 10px;
+    gap: 2px;
+    height: 60vh;
   }
   .firstTechBox{
     width: 100%;
@@ -825,6 +831,7 @@ nav{
   .techLargest{
     width: 100%;
     margin: 0;
+    font-size: 30px;
   }
   .techDetails{
     margin: 0 auto;
