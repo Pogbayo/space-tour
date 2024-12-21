@@ -16,7 +16,7 @@ const Technology = ({ technology }: Props) => {
   };
   useEffect(() => {
     setChosenOne(technology[0]);
-  }, technology);
+  }, [technology]);
   return (
     <div className="techBox">
       <div className="firstTechBox">

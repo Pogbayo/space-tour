@@ -690,6 +690,7 @@ nav{
     width: 95%;
     position: relative;
     top: 0;
+    margin-left: 30px;
     object-fit: contain;
     height: 90%;
     border-radius: inherit;
